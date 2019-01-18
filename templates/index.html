@@ -1,12 +1,805 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Hello world</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700%7COpen+Sans:400,600" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{% static 'css/iconsmind.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/socicons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <title>Hosting Landing Page</title>
 </head>
+<body class="body-2">
 
-<body>
-    <p>Hello, world!</p>
+<section id="promo" class="d-none d-lg-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="mb-0 d-flex align-items-center justify-content-center"><label class="badge badge-secondary mr-3">NOTE</label> This is a non-functioning website and exists only for demostration purposes only</p>
+            </div>
+        </div>
+    </div>
+    <i class="icon icon-Close-Window"></i>
+</section>
+
+<main id="main" class="main main-1">
+    <nav class="navbar navbar-1 navbar-expand-lg navbar-light justify-content-center">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/akeeso_light.png' %}" alt="" class="light">
+                <img src="{% static 'images/akeeso_dark.png' %}" alt="" class="dark">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto fill-flex justify-content-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Home
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Hosting</a>
+                            <a class="dropdown-item" href="#">Domain</a>
+                            <a class="dropdown-item" href="#">VPN</a>
+                            <a class="dropdown-item" href="#">Ecommerce</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#locations">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#charts">Performance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto justify-content-end align-items-start align-items-lg-center">
+                    <li class="nav-item">
+                        {% if user.is_authenticated %}
+                            <a class="nav-link nav-link__cta rounded" href="#">DASHBOARD</a>
+                        {% else %}
+                            <a class="nav-link nav-link__cta rounded" href="#">LOGIN / SIGN UP</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 offset-lg-0 col-md-10 offset-md-1 col-sm-10 offset-sm-1 text-center text-lg-left mb-5 mb-lg-0">
+                    <div class="pr-0 pr-xl-5 pr-lg-0">
+                        <h1 class="main-content__title mb-3 mb-lg-4 h2">Bridging the gap between what Healthcare is and what it can be</h1>
+                        <p class="main-content__lead lead mb-4">Advancing healthcare by helping data-driven teams bring tomorrow's HealthTech today</p>
+                        <div class="row d-none d-lg-flex">
+                            <div class="col-lg-6 col-md-6">
+                                <ul class="features-list list-unstyled m-0">
+                                    <li class="features-list__item d-flex align-items-center">
+                                        <i class="features-list__item--icon mr-2"></i>
+                                        <span class="features-list__item--text color--white">Regulations Bible</span>
+                                    </li>
+                                    <li class="features-list__item d-flex align-items-center">
+                                        <i class="features-list__item--icon mr-2"></i>
+                                        <span class="features-list__item--text color--white">Data in one secure place</span>
+                                    </li>
+                                    <li class="features-list__item d-flex align-items-center">
+                                        <i class="features-list__item--icon mr-2"></i>
+                                        <span class="features-list__item--text color--white">Identify Key Markets</span>
+                                    </li>
+                                    <li class="features-list__item d-flex align-items-center">
+                                        <i class="features-list__item--icon mr-2"></i>
+                                        <span class="features-list__item--text color--white">Motivate Sales Team</span>
+                                    </li>
+                                    <li class="features-list__item d-flex align-items-center">
+                                        <i class="features-list__item--icon mr-2"></i>
+                                        <span class="features-list__item--text color--white">Brand Analysis</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <ul class="features-list list-unstyled m-0">
+                                    <li class="features-list__item d-flex align-items-center">
+                                        <i class="features-list__item--icon mr-2"></i>
+                                        <span class="features-list__item--text color--white">Estimate Market Value</span>
+                                    </li>
+                                    <li class="features-list__item d-flex align-items-center">
+                                        <i class="features-list__item--icon mr-2"></i>
+                                        <span class="features-list__item--text color--white">Blitzscale your sales</span>
+                                    </li>
+                                    <li class="features-list__item d-flex align-items-center">
+                                        <i class="features-list__item--icon mr-2"></i>
+                                        <span class="features-list__item--text color--white">Maintain relations better</span>
+                                    </li>
+                                    <li class="features-list__item d-flex align-items-center">
+                                        <i class="features-list__item--icon mr-2"></i>
+                                        <span class="features-list__item--text color--white">Data in one secure place</span>
+                                    </li>
+                                    <li class="features-list__item d-flex align-items-center">
+                                        <i class="features-list__item--icon mr-2"></i>
+                                        <span class="features-list__item--text color--white">Motivate Sales Team</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn--green btn--lg mb-0 mt-4 d-inline-flex align-items-center">How it Works<i class="icon icon-Right ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right position-relative">
+                    <img src="{% static 'images/hero-illustration-2.png' %}" alt="" class="main-content__img img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<section id="pricing" class="pricing-4 section section--padding section--gradient__2">
+    <div class="container">
+        <div class="row">
+            <div class="preamble preamble--light col-lg-8 offset-lg-2">
+                <h3 class="title">Simple Pricing</h3>
+                <p class="lead">Demonstrating core competencies to in turn innovate. Create stakeholder engagement so that we gain traction.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="pricing-card pricing-card-first">
+                    <h5 class="pricing-card__title mb-4">Pirate Ship</h5>
+                    <h3 class="pricing-card__value"><span class="pricing-currency">$</span><span class="pricing-cost">19</span><span class="pricing-period">/mo</span></h3>
+                    <ul class="pricing-card__list list-unstyled mb-0 pb-1">
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span>1 Website</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span>4GB Disk Space</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span>1000GB Bandwidth</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span>50 MySQL Database</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span>5 FTP User</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span>100 Email Account</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__false mr-2"></i>
+                            <span>Unlimited Website Builder</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__false mr-2"></i>
+                            <span>Unlimited Control Panel</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__false mr-2"></i>
+                            <span>User Friendly Access Manager</span>
+                        </li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn--blue btn--lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="pricing-card pricing-card-highlighted">
+                    <div class="ribbon"><h6 class="text-uppercase mb-0">Popular Option</h6></div>
+                    <h5 class="pricing-card__title mb-4">Destroyer</h5>
+                    <h3 class="pricing-card__value"><span class="pricing-currency">$</span><span class="pricing-cost">99</span><span class="pricing-period">/mo</span></h3>
+                    <ul class="pricing-card__list list-unstyled mb-0 pb-1">
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Websites</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Disk Space</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Bandwidth</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> MySQL Database</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> FTP User</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Email Account</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Website Builder</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__false mr-2"></i>
+                            <span><strong>Unlimited</strong> Control Panel</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__false mr-2"></i>
+                            <span><strong>User Friendly</strong> Access Manager</span>
+                        </li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn--green btn--lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="pricing-card">
+                    <h5 class="pricing-card__title mb-4">Naval Armada</h5>
+                    <h3 class="pricing-card__value"><span class="pricing-currency">$</span><span class="pricing-cost">139</span><span class="pricing-period">/mo</span></h3>
+                    <ul class="pricing-card__list list-unstyled mb-0 pb-1">
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Websites</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Disk Space</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Bandwidth</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> MySQL Database</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> FTP User</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Email Account</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Website Builder</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>Unlimited</strong> Control Panel</span>
+                            <i data-feather="help-circle" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="pricing-icon pricing-icon__true mr-2"></i>
+                            <span><strong>User Friendly</strong> Access Manager</span>
+                        </li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn--blue btn--lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="clients" class="clients-1 section section--padding__bottom">
+
+</section>
+
+<section id="locations">
+    <div class="container">
+        <div class="row">
+            <div class="preamble col-lg-8 offset-lg-2">
+                <h3 class="title">Make Your Move</h3>
+                <p class="lead">With hcsl, the world's your oyster. Just pick a place and *insert awesome action inducing phrase*. Currently available in:</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="{% static 'images/map.png' %}" alt="" class="map img-fluid">
+                <!-- Sydney -->
+                <div class="location location-sydney" data-toggle="tooltip" data-html="true" title="<h5>Sydney</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Sydney</h5>
+                    </div>
+                </div>
+                <!-- Melbourne -->
+                <div class="location location-melbourne" data-toggle="tooltip" data-html="true" title="<h5>Melbourne</h5><p>Available</p>">
+                    <div class="location__pin_available"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Melbourne</h5>
+                    </div>
+                </div>
+                <!-- Singapore -->
+                <div class="location location-singapore" data-toggle="tooltip" data-html="true" title="<h5>Singapore</h5><p>Available</p>">
+                    <div class="location__pin_available"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Singapore</h5>
+                    </div>
+                </div>
+                <!-- Tokyo -->
+                <div class="location location-tokyo" data-toggle="tooltip" data-html="true" title="<h5>Tokyo</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Tokyo</h5>
+                    </div>
+                </div>
+                <!-- San Francisco -->
+                <div class="location location-sanfrancisco" data-toggle="tooltip" data-html="true" title="<h5>San Francisco</h5><p>Coming soon</p>>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>San Francisco</h5>
+                    </div>
+                </div>
+                <!-- Los Angeles -->
+                <div class="location location-losangeles" data-toggle="tooltip" data-html="true" title="<h5>Los Angeles</h5><p>Coming soon</p>>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Los Angeles</h5>
+                    </div>
+                </div>
+                <!-- Mexico -->
+                <div class="location location-mexicocity" data-toggle="tooltip" data-html="true" title="<h5>Mexico City</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Mexico City</h5>
+                    </div>
+                </div>
+                <!-- Miami -->
+                <div class="location location-miami" data-toggle="tooltip" data-html="true" title="<h5>Miami</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Miami</h5>
+                    </div>
+                </div>
+                <!-- NYC -->
+                <div class="location location-newyorkcity" data-toggle="tooltip" data-html="true" title="<h5>New York City</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>New York City</h5>
+                    </div>
+                </div>
+                <!-- Seattle -->
+                <div class="location location-seattle" data-toggle="tooltip" data-html="true" title="<h5>Seattle</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Seattle</h5>
+                    </div>
+                </div>
+                <!-- Bangalore -->
+                <div class="location location-bangalore" data-toggle="tooltip" data-html="true" title="<h5>Bangalore</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Bangalore</h5>
+                    </div>
+                </div>
+                <!-- Delhi -->
+                <div class="location location-delhi" data-toggle="tooltip" data-html="true" title="<h5>Delhi</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Delhi</h5>
+                    </div>
+                </div>
+                <!-- Mumbai -->
+                <div class="location location-mumbai" data-toggle="tooltip" data-html="true" title="<h5>Mumbai</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Mumbai</h5>
+                    </div>
+                </div>
+                <!-- Ahmedabad -->
+                <div class="location location-ahmedabad" data-toggle="tooltip" data-html="true" title="<h5>Ahmedabad</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Ahmedabad</h5>
+                    </div>
+                </div>
+                <!-- Hyderabad -->
+                <div class="location location-hyderabad" data-toggle="tooltip" data-html="true" title="<h5>Hyderabad</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Hyderabad</h5>
+                    </div>
+                </div>
+                <!-- Chennai -->
+                <div class="location location-chennai" data-toggle="tooltip" data-html="true" title="<h5>Chennai</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Chennai</h5>
+                    </div>
+                </div>
+                <!-- Rio -->
+                <div class="location location-rio" data-toggle="tooltip" data-html="true" title="<h5>Brazil - Rio, Sao Paulo</h5><p>Available</p>">
+                    <div class="location__pin_available"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Brazil - Rio, Sao Paulo</h5>
+                    </div>
+                </div>
+                <!-- Jakarta -->
+                <div class="location location-jakarta" data-toggle="tooltip" data-html="true" title="<h5>Jakarta</h5><p>Available</p>">
+                    <div class="location__pin_available"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Jakarta</h5>
+                    </div>
+                </div>
+                <!-- Surabaya -->
+                <div class="location location-surabaya" data-toggle="tooltip" data-html="true" title="<h5>Surabaya</h5><p>Available</p>">
+                    <div class="location__pin_available"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Surabaya</h5>
+                    </div>
+                </div>
+                <!-- Manila -->
+                <div class="location location-manila" data-toggle="tooltip" data-html="true" title="<h5>Manila</h5><p>Available</p>">
+                    <div class="location__pin_available"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Manila</h5>
+                    </div>
+                </div>
+                <!-- Dubai -->
+                <div class="location location-dubai" data-toggle="tooltip" data-html="true" title="<h5>UAE - Dubai, Abu Dhabi</h5><p>Available</p>">
+                    <div class="location__pin_available"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>UAE - Dubai, Abu Dhabi</h5>
+                    </div>
+                </div>
+                <!-- Jeddah -->
+                <div class="location location-jeddah" data-toggle="tooltip" data-html="true" title="<h5>Jeddah</h5><p>Coming soon</p>">
+                    <div class="location__pin"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Jeddah</h5>
+                    </div>
+                </div>
+                <!-- Riyadh -->
+                <div class="location location-saudi-arabia" data-toggle="tooltip" data-html="true" title="<h5>Riyadh</h5><p>Available</p>">
+                    <div class="location__pin_available"></div>
+                    <div class="location__rwd d-block d-md-none">
+                        <h5>Riyadh</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features" class="features-1 section section--padding__wmargin">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="feature d-flex">
+                    <i class="feature__icon icon icon--md icon-CPU icon--color mr-4"></i>
+                    <div>
+                        <h5>100% Intel Cores</h5>
+                        <p class="pr-4">Diversify kpis gain traction, so anti-pattern and get all your ducks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature d-flex">
+                    <i class="feature__icon icon icon--md icon-Billing icon--color mr-4"></i>
+                    <div>
+                        <h5>No long term contracts</h5>
+                        <p class="pr-4">Shoot me an email we've got to manage that low hanging fruit that jerk.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature d-flex">
+                    <i class="feature__icon icon icon--md icon-Atom icon--color mr-4"></i>
+                    <div>
+                        <h5>Powerful API</h5>
+                        <p class="pr-4">Powerpoint Bunny we need distributors to evangelize the new line to local markets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="feature d-flex">
+                    <i class="feature__icon icon icon--md icon-Restore-Window icon--color mr-4"></i>
+                    <div>
+                        <h5>Whenever something happens</h5>
+                        <p class="pr-4">We need more paper drill down, yet t-shaped individual nor are we in agreeance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature d-flex">
+                    <i class="feature__icon icon icon--md icon-Data-Lock icon--color mr-4"></i>
+                    <div>
+                        <h5>Root administrator access</h5>
+                        <p class="pr-4">Dog and pony show your work on this project has been really impactful quick win.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature d-flex">
+                    <i class="feature__icon icon icon--md icon-Target icon--color mr-4"></i>
+                    <div>
+                        <h5>Infinite OS combinations</h5>
+                        <p class="pr-4">Time to open the kimono I have zero cycles for this. Where do we stand on the latest client ask.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="charts" class="section section--padding">
+    <div class="container">
+        <div class="row">
+            <div class="preamble col-lg-8 offset-lg-2">
+                <h3 class="title">Performance Comparison</h3>
+                <p class="lead">How much money are you losing * create a JavaScript thingy</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                <header class="chart-header">
+                    <h5>Lead generation time taken</h5>
+                    <p>lower is better</p>
+                </header>
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                <header class="chart-header">
+                    <h5>Sales productivity</h5>
+                    <p>higher is better</p>
+                </header>
+                <canvas id="myChart2" width="400" height="400"></canvas>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+                <header class="chart-header">
+                    <h5>Average revenue increase</h5>
+                    <p>higher is better</p>
+                </header>
+                <canvas id="myChart3" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="faq-1 section section--padding__wmargin">
+    <div class="container">
+        <div class="row">
+            <div class="preamble col-lg-8 offset-lg-2">
+                <h3 class="title">Frequently Asked Questions</h3>
+                <p class="lead">Demonstrating core competencies to in turn innovate. Create stakeholder engagement so that we gain traction.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="question col-lg-4">
+                <h5>How do I sign up for the free trial?</h5>
+                <p>Game plan great plan! let me diarize this, and we can synchronise ourselves at a later timepoint high performance keywords so critical mass.</p>
+            </div>
+            <div class="question col-lg-4">
+                <h5>Who is eligible for the free trial?</h5>
+                <p>Great plan! let me diarize this, and we can synchronise ourselves at a later timepoint blue sky nor rock Star/Ninja yet mobile friendly, nor accountable talk.</p>
+            </div>
+            <div class="question col-lg-4">
+                <h5>What can I use the free trial for?</h5>
+                <p>What do you feel you would bring to the table if you were hired for this position. We are running out of runway we need distributors to evangelize.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="question col-lg-4">
+                <h5>Are there any limitations?</h5>
+                <p>We need distributors to evangelize the new line to local markets hammer out win-win-win drink from the firehose, so make sure to include in your wheelhouse market-facing.</p>
+            </div>
+            <div class="question col-lg-4">
+                <h5>What are the terms of service?</h5>
+                <p>Strategic high-level 30,000 ft view helicopter view, nor UX, but UI. I just wanted to give you a heads-up thinking outside the box, or anti-pattern so we're ahead.</p>
+            </div>
+            <div class="question col-lg-4">
+                <h5>How does it work?</h5>
+                <p>Please advise soonest work we don't want to boil the ocean or we need to socialize the comms with the wider stakeholder community not enough bandwidth.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="gradient-wrapper">
+    <section id="testimonials" class="testimonials-2">
+        <div class="container">
+            <div class="row">
+                <div class="preamble col-lg-8 offset-lg-2 mb-5">
+                    <h3 class="title">Testimonials</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonials-card">
+                        <div class="row">
+                            <div class="d-none d-lg-flex testimonials-card__button testimonials-card__prev-button">
+                                <i class="icon icon-Arrow-LeftinCircle icon--color"></i>
+                            </div>
+                            <div class="d-none d-lg-flex testimonials-card__button testimonials-card__next-button">
+                                <i class="icon icon-Arrow-RightinCircle icon--color"></i>
+                            </div>
+                            <div class="col-lg-8 offset-lg-2">
+                                <div class="owl-carousel owl-theme">
+                                    <blockquote class="blockquote text-center">
+                                        <img src="http://via.placeholder.com/70x70" alt="" class="blockquote__avatar">
+                                        <p class="mb-0">"Obviously not the long pole in my tent. Drink the Kool-aid curate nail jelly to the hothouse wall. Digital literacy knowledge process outsourcing so deliverables game plan, yet we need to socialize"</p>
+                                        <footer class="blockquote-footer">
+                                            <h5 class="mb-0 mt-4">Austin Clein</h5>
+                                            <p>Interface Designer</p>
+                                        </footer>
+                                    </blockquote>
+                                    <blockquote class="blockquote text-center">
+                                        <img src="http://via.placeholder.com/70x70" alt="" class="blockquote__avatar">
+                                        <p class="mb-0">"High-level bake it in feature creep pulling teeth, nor screw the pooch, or hit the ground running. Vertical integration programmatically, I have zero cycles for this, and price point."</p>
+                                        <footer class="blockquote-footer">
+                                            <h5 class="mb-0 mt-4">Austin Clein</h5>
+                                            <p>Interface Designer</p>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials-shadow testimonials-shadow-1"></div>
+                    <div class="testimonials-shadow testimonials-shadow-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cta" class="cta-2">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-7 col-md-12">
+                    <div class="preamble preamble--light text-center text-lg-left mb-0 pl-0 pr-0 pr-lg-5 pl-lg-0">
+                        <h3 class="title mb-3">Scale your sales now!</h3>
+                        <p class="mb-lg-0">Compound your product's growth like nothing else before</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12">
+                    <ul class="list-unstyled mb-0 d-block d-sm-flex justify-content-center justify-content-lg-end mt-4 mt-lg-0">
+                        <li class="mr-0 mr-sm-4">
+                            <a href="#" class="btn btn--green btn--lg mb-2 mb-sm-0">Get Started</a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn--white btn--lg">Learn More</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="footer-2">
+        <div class="container">
+            <div class="row row-top fill-flex">
+                <div class="col-md-3 col-sm-3 col-6 mb-4 mb-md-0">
+                    <div class="footer-widget">
+                        <h5 class="footer-widget__title">Resources</h5>
+                        <ul class="list-unstyled m-0 p-0 footer-widget__nav">
+                            <li><a href="#">Free market opportunity calculator</a></li>
+                            <li><a href="#">Explore</a></li>
+                            <li><a href="#">How it Works</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-6 mb-4 mb-md-0">
+                    <div class="footer-widget">
+                        <h5 class="footer-widget__title">Company</h5>
+                        <ul class="list-unstyled m-0 p-0 footer-widget__nav">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">White Paper</a></li>
+                            <li><a href="#">Abouts Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-6 mb-4 mb-md-0">
+                    <div class="footer-widget">
+                        <h5 class="footer-widget__title">Earn Money</h5>
+                        <ul class="list-unstyled m-0 p-0 footer-widget__nav">
+                            <li><a href="#">Affiliate</a></li>
+                            <li><a href="#">Become a Seller</a></li>
+                        </ul>
+                    </div>
+                </div>
+{#                <div class="col-md-3 col-sm-3 col-6 mb-4 mb-md-0">#}
+{#                    <div class="footer-widget">#}
+{#                        <h5 class="footer-widget__title">Contact</h5>#}
+{#                        <address class="footer-widget__address">#}
+{#                            <strong>Twitter, Inc.</strong><br>#}
+{#                            1355 Market St, Suite 900<br>#}
+{#                            San Francisco, CA 94103<br>#}
+{#                            <abbr title="Phone">P:</abbr> (123) 456-7890#}
+{#                        </address>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+
+{#            <div class="row row-bottom d-flex align-items-center">#}
+{#                <div class="col-12 col-md-6 text-center text-md-left">#}
+{#                    <p class="footer__copyrights mb-md-0">© Copyright 2018 PeElOne - All Rights Reserved</p>#}
+{#                </div>#}
+{#                <div class="col-12 col-md-6 justify-content-center justify-content-md-end d-flex">#}
+{#                    <ul class="footer__social list-unstyled m-0 d-flex align-items-center">#}
+{#                        <li>#}
+{#                            <a href="#">#}
+{#                                <i class="socicon-facebook"></i>#}
+{#                            </a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="#">#}
+{#                                <i class="socicon-twitter"></i>#}
+{#                            </a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="#">#}
+{#                                <i class="socicon-skype"></i>#}
+{#                            </a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="#">#}
+{#                                <i class="socicon-disqus"></i>#}
+{#                            </a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="#">#}
+{#                                <i class="socicon-medium"></i>#}
+{#                            </a>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+        </div>
+    </footer>
+</div>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/chart.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
 </body>
-
 </html>
