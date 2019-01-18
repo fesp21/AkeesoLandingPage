@@ -94,7 +94,7 @@ $(document).ready(function () {
                 ticks: {
                     beginAtZero:true,
                     callback: function(value) {
-                        return value + '.00';
+                        return '$' + value;
                     }
                 },
                 afterFit: function(scaleInstance) {
@@ -151,7 +151,7 @@ $(document).ready(function () {
                 ticks: {
                     beginAtZero:true,
                     callback: function(value) {
-                        return value + ' MB/s';
+                        return value + '%';
                     }
                 },
                 afterFit: function(scaleInstance) {
@@ -186,58 +186,55 @@ $(document).ready(function () {
         }
     };
 
-    var ctx = document.getElementById("myChart");
+    let ctx = document.getElementById("myChart");
 
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["768MB", "1GB", "C3 Large"],
+            labels: ["With akeeso", "Without"],
             datasets: [{
                 label: '# of Votes',
-                data: [1500, 1250, 750],
-                names: ['Austin', 'DataScience', 'AWS'],
+                data: [4, 21],
+                names: ['4 days', '21 days'],
                 backgroundColor: [
                     '#00b4ff',
                     '#e6e9eb',
-                    '#e6e9eb'
                 ]
             }]
         },
         options: options
     });
 
-    var ctx2 = document.getElementById("myChart2");
+    let ctx2 = document.getElementById("myChart2");
     new Chart(ctx2, {
         type: 'bar',
         data: {
-            labels: ["768MB", "1GB", "C3 Large"],
+            labels: ["With akeeso", "Without"],
             datasets: [{
                 label: '# of Votes',
-                data: [300, 75, 25],
-                names: ['Austin', 'DataScience', 'AWS'],
+                data: [3000, 4800],
+                names: ['$3000', '$4800'],
                 backgroundColor: [
                     '#00b4ff',
                     '#e6e9eb',
-                    '#e6e9eb'
                 ]
             }]
         },
         options: options
     });
 
-    var ctx3 = document.getElementById("myChart3");
+    let ctx3 = document.getElementById("myChart3");
     new Chart(ctx3, {
         type: 'bar',
         data: {
-            labels: ["768MB", "1GB", "C3 Large"],
+            labels: ["With akeeso", "Without"],
             datasets: [{
                 label: '# of Votes',
-                data: ['450', '160', '100'],
-                names: ['Austin', 'DataScience', 'AWS'],
+                data: ['170', '100'],
+                names: ['With akeeso', 'Without'],
                 backgroundColor: [
                     '#00b4ff',
                     '#e6e9eb',
-                    '#e6e9eb'
                 ]
             }]
         },
